@@ -29,6 +29,7 @@
 body {
   /*background group (short-hand)*/
   background: var(--background-image) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -43,7 +44,6 @@ body * {
   margin: auto;
   margin-top: 36px;
   padding: 0px 24px;
-  /*border: 1px solid white;*/
 }
 
 /*Criando um pai para o profile, que seguirá essa regra*/
@@ -163,4 +163,14 @@ footer {
   padding: 24px 0px;
   text-align: center;
   font-size: 14px;
+}
+
+/*media queuries*/
+@media (min-width: 700px){
+  :root{
+    --background-image: url(./assets/bg-desktop.jpg);
+  }
+  .light{
+    --background-image: url(./assets/bg-desktop-light.jpg)
+  }
 }
