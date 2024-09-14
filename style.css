@@ -70,10 +70,6 @@ body * {
   margin: 4px auto;
 }
 
-#switch :hover {
-  cursor: pointer;
-}
-
 #switch button {
   width: 32px;
   height: 32px;
@@ -84,6 +80,11 @@ body * {
   z-index: 1;
   transform: translateX(-5%) translateY(-10%);
   animation: slide-out 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color-social);
+  cursor: pointer;
 }
 
 .light #switch button {
