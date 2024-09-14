@@ -2,7 +2,7 @@
 
 <p align="center">
 First front-web project developed. <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Based on the RocketSeat Discover Project</a>
+<a href="https://www.rocketseat.com.br/">Based on the RocketSeat Discover Project</a>
 </p>
 
 <p align="center">
