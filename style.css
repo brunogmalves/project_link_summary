@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --background-image: url(./assets/bg-mobile.jpg);
+  --stokecolor: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.2);
+  --highlight-color-social: rgba(255, 255, 255, 0.2);
+  --background-switch-image: url(./assets/MoonStars.svg);
+  --avatar-img: url(./assets/avatar.png);
+}
+
+.light {
+  --text-color: black;
+  --background-image: url(./assets/bg-mobile-light.jpg);
+  --stokecolor: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color-social: rgba(0, 0, 0, 0.1);
+  --background-switch-image: url(./assets/Sun.svg);
+  --avatar-img: url(./assets/avatar-light.png);
+}
+
+body {
+  /*background group (short-hand)*/
+  background: var(--background-image) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/*Criando um container para colocar todos os itens dentro*/
+#container {
+  width: auto;
+  margin: auto;
+  margin-top: 36px;
+  padding: 0px 24px;
+  max-width: 800px;
+  /*border: 1px solid white;*/
+}
+
+/*Criando um pai para o profile, que seguirá essa regra*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+/*Configurando a imagem de perfil*/
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  display: block;
+  margin: 4px auto;
+}
+
+#switch :hover {
+  cursor: pointer;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--background-switch-image) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-5%) translateY(-10%);
+}
+
+.light #switch button {
+  left: initial;
+  right: 0;
+  box-shadow: 20px;
+}
+
+#switch span {
+  display: block;
+  width: 62px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stokecolor);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+  position: absolute;
+}
+
+ul {
+  list-style: none;
+  margin-top: 50px;
+  gap: 16px;
+  padding-top: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 32px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stokecolor);
+  border-radius: 12px;
+  padding: 16px 24px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif, var(--text-color);
+  text-decoration: none;
+  font-weight: 400;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social_icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 24px;
+  padding: 24px 0px;
+
+  transition: background 0.2s;
+}
+
+#social_icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px;
+  border-radius: 50%;
+}
+
+#social_icons a:hover {
+  background: var(--highlight-color-social);
+}
+
+footer {
+  padding: 24px 0px;
+  text-align: center;
+  font-size: 14px;
+}
