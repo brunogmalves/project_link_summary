@@ -117,6 +117,7 @@ ul li a {
   border: 1px solid var(--stokecolor);
   border-radius: 12px;
   padding: 16px 24px;
+  text-align: center;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
