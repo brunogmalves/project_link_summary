@@ -83,12 +83,11 @@ body * {
   position: absolute;
   z-index: 1;
   transform: translateX(-5%) translateY(-10%);
+  animation: slide-out 0.4s forwards;
 }
 
 .light #switch button {
-  left: initial;
-  right: 0;
-  box-shadow: 20px;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -151,7 +150,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 19px;
+  padding: 5px;
   border-radius: 50%;
 }
 
@@ -172,5 +171,24 @@ footer {
   }
   .light{
     --background-image: url(./assets/bg-desktop-light.jpg)
+  }
+}
+
+/*animation*/
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
   }
 }
